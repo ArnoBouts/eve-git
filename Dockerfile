@@ -6,6 +6,4 @@ RUN apt-get update \
 		git-core \
 	&& rm -rf /var/lib/apt/lists/* 
 
-COPY /entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+COPY /eve.sh /eve.sh

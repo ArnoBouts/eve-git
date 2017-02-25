@@ -8,6 +8,6 @@ RUN apt-get update \
 		npm \
 	&& rm -rf /var/lib/apt/lists/* 
 
-RUN npm install git-credential-env
+RUN npm install -g git-credential-env
 
 COPY /eve.sh /eve.sh

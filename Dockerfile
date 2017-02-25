@@ -1,13 +1,7 @@
-FROM debian
+FROM alpine
 
-RUN apt-get update \
-	&& apt-get install --no-install-recommends --no-install-suggests -y \
-		ca-certificates \
-		git-core \
-		nodejs \
-		npm \
-	&& rm -rf /var/lib/apt/lists/* 
-
-RUN npm install -g git-credential-env
+RUN apk update \
+	&& apk add --no-cache \
+		git
 
 COPY /eve.sh /eve.sh

@@ -8,7 +8,7 @@ git remote add origin ${PLUGIN_REPOSITORY}
 SHA=$(git rev-parse --short $(git ls-remote origin ${PLUGIN_BRANCH} | cut -f1))
 cd $pwd
 
-grep -H -o -r "${PLUGIN_VARIABLE} [1-9a-fA-F]*^" * | while read LINE
+grep -H -o -r "${PLUGIN_VARIABLE} [1-9a-fA-F]*$" * | while read LINE
 do
 	FILE=`echo $LINE | cut -d":" -f1`
 	OLD=`echo $LINE | cut -d" " -f2`

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Get Git commit id for branch ${PLUGIN_BRANCH} of ${PLUGIN_REPOSITORY}"
+
 mkdir -p /tmp/repo
 pwd=$(pwd)
 cd /tmp/repo
